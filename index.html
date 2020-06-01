@@ -8,16 +8,25 @@
 </head>
 <body>
     <a href='' onclick='window.open("https://www.google.com", "_blank")'>tab1</a>
-    <a class="tab" href='' onclick='window.open("https://www.google.com", "_blank")'>tab2</a>
+    <a class="tab" href=''>tab2</a>
+    <a class="tab1" href='https://www.google.com'>tab3</a>
     <script>
         const tab = document.querySelector('.tab');
+        const tab1 = document.querySelector('.tab1');
 
-        function addClick() {
+        function addClick(e) {
+            window.open("https://www.google.com", "_blank");
+            return false;
+        }
+
+        function addAnotherClick(e) {
+            e.preventDefault();
             window.open("https://www.google.com", "_blank");
             return false;
         }
 
         tab.addEventListener('click', addClick);
+        tab1.addEventListener('click', addAnotherClick);
     </script>
 </body>
 </html>
