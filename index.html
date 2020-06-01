@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test 1</title>
+</head>
+<body>
+    <a href='' onclick='window.open("https://www.google.com", "_blank")'>tab1</a>
+    <a class="tab" href='' onclick='window.open("https://www.google.com", "_blank")'>tab2</a>
+    <script>
+        const tab = document.querySelector('.tab');
+
+        function addClick() {
+            window.open("https://www.google.com", "_blank");
+            return false;
+        }
+
+        tab.addEventListener('click', addClick);
+    </script>
+</body>
+</html>
